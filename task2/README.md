@@ -29,3 +29,7 @@ In my last role, I also used **Wiz** for cloud security posture management.
 I was responsible for presenting vulnerability scores to DevOps via **Backstage**, helping developers understand the severity of vulnerabilities and decide which ones to remediate first.  
 
 
+To prevent these security findings from being ignored, a centralized page showing the scores and best practices could motivate people to address them.  
+It is especially important to explain why they can be dangerous and how they could affect their applications.
+
+
