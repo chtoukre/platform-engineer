@@ -24,3 +24,4 @@ Work with DevOps to review which vulnerabilities are relevant for our environmen
 🔍 Previous Experience
 In my last role, we also used Wiz for cloud security posture management.
 I was responsible for using Wiz to present vulnerability scores to the DevOps team through Backstage, which gave developers visibility into the severity of vulnerabilities and helped them decide which ones to address first.
+
