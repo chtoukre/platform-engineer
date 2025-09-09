@@ -1,0 +1,33 @@
+# .github/workflows/compliance.yml
+name: Repository Health Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Verify required files and folders
+        run: |
+          required=("README.md" "version.txt" "infra" ".env" "apps")
+          missing=0
+          for file in "${required[@]}"; do
+            if [ ! -e "$file" ]; then
+              echo "❌ Missing: $file"
+              missing=1
+            else
+              echo "✅ Found: $file"
+            fi
+          done
+          if [ $missing -eq 1 ]; then
+            echo "Repository does not meet compliance requirements."
+            exit 1
+          fi
+
