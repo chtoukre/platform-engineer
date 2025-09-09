@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Keep Node.js dependencies (Backstage core + plugins) up to date
+  - package-ecosystem: "npm"
+    directory: "/" # Location of your main package.json
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+
+  # Update dependencies in plugins/packages (Backstage monorepo style)
+  - package-ecosystem: "npm"
+    directory: "/packages/app"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+
+  # You can repeat the above block for each package/plugin in /packages/*
+
+  # Keep GitHub Actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+
