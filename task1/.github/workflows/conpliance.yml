@@ -1,0 +1,10 @@
+name: Compliance Check
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  compliance:
+    uses: chtoukre/platform-engineer/.github/workflows/compliance.yml@cstraub/feature/workflows
+
