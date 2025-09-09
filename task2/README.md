@@ -1,27 +1,31 @@
-🔒 Security with Dependabot
-Dependabot helps us keep our project safe and up to date by automatically checking our dependencies.
-For security reasons, we configure Dependabot to:
-✅ Check package dependencies to avoid compatibility issues and outdated libraries.
-✅ Monitor for vulnerabilities: if a package has a known security issue (with a given severity), Dependabot will alert us so we can decide whether an upgrade is required immediately.
-✅ Scan Docker images to detect if they are using base images or packages with high-level vulnerabilities.
-✅ Automate updates by creating pull requests that upgrade dependencies to secure versions.
-This ensures that we reduce the risk of introducing insecure or deprecated packages into the project.
+# 🔒 Security and Vulnerability Management in GitHub
 
+GitHub offers built-in features to identify and mitigate risks in repositories, including:  
 
-🛡️ My Solution – Managing Vulnerabilities with Dependabot
-For this part, I configured Dependabot to automatically check for vulnerabilities in dependencies.
-This allows us to be notified when a dependency in our project contains a known security issue.
-⚠️ The Challenge
-The problem with vulnerabilities is that it quickly becomes complex:
-A package may be used in different contexts, and whether a vulnerability is dangerous often depends on how and where it is used.
-A single vulnerability might be low risk if isolated, but multiple small vulnerabilities combined can become more dangerous than one well-known vulnerability.
-The hardest part is not only detecting vulnerabilities but also deciding which ones matter most and how to remediate them.
-🎯 My Approach
-Use Dependabot to scan dependencies and raise alerts when issues are found.
-Look at the vulnerability score (CVSS) to assess risk levels and prioritize fixes.
-Consider cumulative risk: many low-severity issues together can create a bigger security problem.
-Work with DevOps to review which vulnerabilities are relevant for our environment and which can be tolerated temporarily.
-🔍 Previous Experience
-In my last role, we also used Wiz for cloud security posture management.
-I was responsible for using Wiz to present vulnerability scores to the DevOps team through Backstage, which gave developers visibility into the severity of vulnerabilities and helped them decide which ones to address first.
+- **Dependency Graph** to detect dependencies.  
+- **Dependabot Alerts & Security Updates** to notify and automatically fix vulnerabilities.  
+- **Secret Scanning** to catch exposed tokens or keys.  
+- **Code Scanning (CodeQL)** to find security issues in the code itself.  
+- **Security Advisories** for coordinated reporting of vulnerabilities.  
+
+---
+
+# 🛡️ My Solution with Dependabot
+
+I configured **Dependabot** to automatically scan dependencies and notify us when vulnerabilities are found.  
+I added a `./github/dependabot.yml` file in my repository (Task 2) to enable this. With this setup, Dependabot can highlight vulnerabilities in the dependencies of my application.  
+
+## ⚠️ The Challenge: Prioritization  
+- Some vulnerabilities depend on **context of use** (not all are equally critical).  
+- **Multiple low-severity issues combined** can be more dangerous than one isolated high-severity issue.  
+
+## 🎯 My Approach  
+- Use **CVSS scores** to assess risk and prioritize fixes.  
+- Consider **cumulative risk** of several small vulnerabilities.  
+- Collaborate with **DevOps** to decide which vulnerabilities can be tolerated temporarily and which require immediate fixes.  
+
+## 🔍 Previous Experience  
+In my last role, I also used **Wiz** for cloud security posture management.  
+I was responsible for presenting vulnerability scores to DevOps via **Backstage**, helping developers understand the severity of vulnerabilities and decide which ones to remediate first.  
+
 
