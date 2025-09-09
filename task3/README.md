@@ -29,3 +29,6 @@ If I have access to all repositories:
   grep -r "buggy-actions/expose-passwords" */.github/workflows/*.yml
 
 ```
+To avoid this kind of problem, we can imagine a list of authorized actions that people can use.  
+This list would be placed in another repository, and a GitHub workflow or a predefined action would allow users to either use them or not.  
+In addition, it should be accessible for other use cases if they want to do self-service requests to add new actions.
