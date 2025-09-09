@@ -22,5 +22,9 @@ If I have access to all repositories:
   - Using command line tools such as:
 
   ```bash
-  grep -r "buggy-actions/expose-passwords" */.github/workflows/*.yml
-
+mkdir org
+cp cloneAll.sh org
+cd cloneAll.sh 
+sh cloneAll.sh
+grep -r "buggy-actions/expose-passwords" */.github/workflows/*.yml
+```
