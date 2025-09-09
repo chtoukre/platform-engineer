@@ -21,10 +21,11 @@ If I have access to all repositories:
   - Using VS Code’s search function, or  
   - Using command line tools such as:
 
-  ```bash
-mkdir org
-cp cloneAll.sh org
-cd cloneAll.sh 
-sh cloneAll.sh
-grep -r "buggy-actions/expose-passwords" */.github/workflows/*.yml
+```bash
+  mkdir org
+  cp cloneAll.sh org
+  cd org
+  sh cloneAll.sh
+  grep -r "buggy-actions/expose-passwords" */.github/workflows/*.yml
+
 ```
