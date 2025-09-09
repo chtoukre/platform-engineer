@@ -2,7 +2,7 @@ version: 2
 updates:
   # Keep Node.js dependencies (Backstage core + plugins) up to date
   - package-ecosystem: "npm"
-    directory: "/" # Location of your main package.json
+    directory: "/task2/apps" # Location of your main package.json
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
@@ -14,7 +14,7 @@ updates:
 
   # Update dependencies in plugins/packages (Backstage monorepo style)
   - package-ecosystem: "npm"
-    directory: "/packages/app"
+    directory: "task2/apps/packages/app"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 10
