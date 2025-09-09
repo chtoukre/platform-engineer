@@ -42,4 +42,17 @@ pip install -r requirements.txt
 
 # Serve the MkDocs site locally
 mkdocs serve
+```
+## Validation with Reusable Workflows
+
+To verify the existence and validity of required files, we can use a **reusable workflow** (for example, from `cstraub/feature/workflow`) inside this template.  
+This workflow will ensure that the expected files are present and valid.
+
+### Monorepo Example
+
+In the case of a **monorepo**, we can:
+- Run a GitHub Action to check whether the `docs/` folder exists.  
+- Verify that the required `.md` documentation files are present.  
+- Add a validation step to ensure that the overall **monorepo structure** is respected.  
+
 
