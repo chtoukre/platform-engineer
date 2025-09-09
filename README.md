@@ -48,20 +48,15 @@ Key points:
 ## ⚙️ Task 3 — GitHub Actions Audit Script
 
 For this task, I assumed I had access to multiple repositories.  
-I reproduced a script I had written in a previous job, which:
+I reproduced a **Bash script** I had written and used in a previous job, which:
 
-- Fetches all GitHub Actions used across repositories.
-- Displays them in a **table format** per application.
-- Helps verify:
-  - Which versions of actions are being used.
-  - Whether repositories are using the correct internal GitHub Actions.
+- Searches across all repositories for specific GitHub Actions.
 
----
+In my previous experience, we also used **Backstage** and automated a page per application that:
 
-## 🚀 Future Improvements
+- Fetched all GitHub Actions used across repositories.
+- Displayed them in a **table format** per application.
+- Helped verify:
+  - Which versions of actions were being used.
+  - Whether repositories were using the correct internal GitHub Actions.
 
-- Complete the **installation guide** for Task 1.
-- Enhance security analysis by combining **Dependabot + Wiz context**.
-- Automate the GitHub Actions audit into a recurring job (CI/CD check).
-
----
